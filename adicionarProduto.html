@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/adicionarProduto.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Adicionar Carta</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="header-inner-content">
+          <img
+            src="images/design/logoPretoBrancoSemFundo.png"
+            width="120"
+            height="60"
+            alt="Logo"
+          />
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#">Meus Cards</a></li>
+            </ul>
+          </nav>
+          <div class="nav-icon-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-circle-user"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="add-product-container">
+        <h1>Adicionar Carta</h1>
+
+        <form class="add-product-form">
+          <div class="form-field">
+            <label for="player-name">Nome do Jogador</label>
+            <input type="text" id="player-name" />
+          </div>
+
+          <div class="form-field">
+            <label for="player-level">Nível</label>
+            <input type="text" id="player-level" />
+          </div>
+
+          <div class="form-field">
+            <label for="player-rarity">Raridade</label>
+            <input type="text" id="player-rarity" />
+          </div>
+
+          <div class="form-field">
+            <label for="player-value">Valor</label>
+            <input type="text" id="player-value" />
+          </div>
+
+          <div class="form-field">
+            <label for="player-card">Carta</label>
+            <label for="upload-anexo" class="upload-label">
+              <span>uploadAnexo</span>
+              <input type="file" id="upload-anexo" />
+            </label>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" class="btn btn-secondary">Limpar</button>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+</form> 
+<div class="items-list-container">
+    <h2 class="list-title">Itens Adicionados</h2>
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Nome do Jogador</th>
+                <th>Raridade</th>
+                <th>Nível</th>
+                <th>Valor</th>
+                <th>Carta</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+    <footer>
+      <div class="footer-inner-content">
+        <span>Todos os direitos reservados a FuteCards</span>
+        <div class="social-links">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
