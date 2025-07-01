@@ -55,100 +55,132 @@ nav a {
     padding: 1rem;
 }
 
+.nav-icon-container a {
+    color: white;
+    text-decoration: none; 
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center; 
+    background-color: #ffffff; 
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
+
+.search-text {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    width: 150px;
+    transition: width 0.4s ease-in-out; 
+}
+
+.search-text:focus {
+    width: 200px; 
+}
+
+.search-text::placeholder {
+    color: #a9a9a9;
+}
+
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn .fa-magnifying-glass {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
 .catalog-header {
     display: flex;
     justify-content: flex-end; 
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.5rem;
     color: #333;
 }
 
 .catalog {
-    max-width: 1250px;
-    margin: 1rem auto;
+    max-width: 1500px;
+    margin: 0.5rem auto;
     padding: 0 1rem;
 }
 
 
 .card-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
-    max-height: 230px; 
-    transition: transform 0.5s ease;
-    position: relative;
-    z-index: 2
+    width: 240px;
+    height: 380px;
+    background-color: black;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
 }
 
 .card-image {
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: contain;
     transition: transform 0.8s ease;
-    position: relative; 
-    z-index: 2;
 }
 
 .card-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 45%;
-    background-color: black;
     color: white;
-    
-
-
-    padding: 60px 1rem 1.5rem 1rem;
-    text-align: center; 
-    border-radius: 5px;
-    opacity: 0;
-    transform: translateY(100%); 
-    transition: transform 0.5s ease, opacity 0.5s ease; 
-    z-index: 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-grow: 1;
 }
-.info-content {
-    height: 100%;
-    color: white; /* A cor do texto fica aqui */
-    padding: 60px 1rem 1.5rem 1rem; /* O espaçamento fica aqui */
-    text-align: center; /* O alinhamento fica aqui */
+
+.card-info p {
+    width: 80%;
+    margin: 2px;
+    text-align: left;
+    font-size: 0.9rem;
 }
 
 .buy-button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     width: 80%;
     display: block;
-    margin: 1rem auto 0 auto; 
+    margin: 0.5rem auto 0 auto; 
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 3fr);
     gap: 0.5rem;
     justify-items: center; 
 }
 
 .card-container:hover .card-image {
-    transform: perspective(1000px) translateY(-15%) rotateX(15deg) rotateY(360deg) scale(1.1);
-}
-
-.card-container:hover {
-    z-index: 10;
-    transition: transform 0.8s ease, z-index 0s 0s; 
-}
-
-.card-container:hover .card-info {
-    opacity: 1;
-    transform: translateY(0); 
+    transform: rotateY(360deg);
 }
 
 footer { 

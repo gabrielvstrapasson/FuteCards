@@ -55,6 +55,56 @@ nav a {
     padding: 1rem;
 }
 
+.nav-icon-container a {
+    color: white;
+    text-decoration: none; 
+}
+
+.search-box {
+    display: flex;
+    align-items: center; 
+    background-color: #ffffff; 
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
+
+.search-text {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    width: 150px;
+    transition: width 0.4s ease-in-out; 
+}
+
+.search-text:focus {
+    width: 200px; 
+}
+
+.search-text::placeholder {
+    color: #a9a9a9;
+}
+
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn .fa-magnifying-glass {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
 .add-product-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -135,15 +185,14 @@ nav a {
     background-color: #c7c7c7;
 }
 
-/* Lista de itens */
 
 .items-list-container {
     margin-top: 0.5rem;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.5rem;
+    margin: 4px auto;
+    padding: 2rem;
     background-color: white;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(1, 0, 1, 0.1);
     border-radius: 8px;
 }
 
@@ -158,12 +207,12 @@ nav a {
 }
 
 .items-table thead th{
-    background-color: #e9ecef; /* Um cinza bem claro para o fundo do cabeçalho */
+    background-color: #e9ecef; 
     padding: 0.8rem 1rem;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left; 
     font-size: 0.9rem;
     color: #333;
-    border-bottom: 2px solid #dee2e6; /* Linha sutil abaixo do cabeçalho */
+    border-bottom: 2px solid #dee2e6;
 }
 
 .items-table tbody {

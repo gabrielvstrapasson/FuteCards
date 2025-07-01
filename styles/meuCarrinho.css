@@ -55,6 +55,56 @@ nav a {
     padding: 1rem;
 }
 
+.search-box {
+    display: flex;
+    align-items: center; 
+    background-color: #ffffff; 
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
+.nav-icon-container a {
+    color: white;
+    text-decoration: none; 
+}
+
+
+.search-text {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    width: 150px;
+    transition: width 0.4s ease-in-out; 
+}
+
+.search-text:focus {
+    width: 200px; 
+}
+
+.search-text::placeholder {
+    color: #a9a9a9;
+}
+
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn .fa-magnifying-glass {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
 .add-product-container {
     max-width: 1200px;
     margin: 0 auto;
