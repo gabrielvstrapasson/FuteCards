@@ -229,13 +229,35 @@ nav a {
     padding: 0.8rem 1rem;
     text-align: left; 
     font-size: 0.9rem;
-        color: white;
+    color: white;
     border-bottom: 2px solid #dee2e6;
 }
 
+.items-table td {
+    padding: 0.5rem 1rem; /* Diminui o espaçamento vertical */
+    vertical-align: middle; /* Alinha o conteúdo de todas as células no meio */
+    border-bottom: 1px solid #c7c7c7; /* Adiciona uma linha separadora */
+}
+
+/* 2. Limita o tamanho da imagem da carta */
+.items-table .product-image {
+    max-width: 60px; 
+    height: auto;
+    border-radius: 4px; /* Opcional: para arredondar as bordas da imagem */
+}
+
+/* 3. Garante que os botões de ação fiquem centralizados */
+.items-table .btn-edit,
+.items-table .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
 .items-table tbody {
     background-color: #f0f0f0;
     height: 200px;
+    color: black;
 }
 
 footer { 
