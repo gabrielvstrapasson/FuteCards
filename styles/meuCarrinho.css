@@ -64,76 +64,6 @@ nav a {
     border-radius: 8px;
 }
 
-.add-product-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.form-title {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.form-field label {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
-    font-weight: bold;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-field input[type="text"] {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.upload-label {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 0.8rem;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: right;
-    color: #888;
-    font-size: 0.9rem;
-}
-
-.form-buttons {
-    display: flex; 
-    justify-content: flex-end; 
-    gap: 2rem; ;
-}
-
-.btn {
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-primary:hover{
-    background-color: #0056b3;
-}
-
-.btn-secondary {
-    background-color: #e0e0e0;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #c7c7c7;
-}
 
 /* Lista de itens */
 
@@ -157,6 +87,7 @@ nav a {
     border-collapse: collapse;
 }
 
+
 .items-table thead th{
     background-color: #e9ecef; /* Um cinza bem claro para o fundo do cabeçalho */
     padding: 0.8rem 1rem;
@@ -167,9 +98,71 @@ nav a {
 }
 
 .items-table tbody {
-    background-color: #f0f0f0;
-    height: 200px;
+    background-color: #e9ecef;
 }
+
+.items-table td {
+    padding: 1rem;
+    vertical-align: middle; 
+}
+
+.card-item {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.product-sell {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.product-sell img {
+    max-width: 100px;;
+}
+
+.product-details p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.quantity-items {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.quantity-btn {
+    background-color: #d1d1d1;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 28px;
+}
+
+.price-sell {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.delete-icon {
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    color: red;
+}
+
+
+
+
 
 footer { 
         background-color: black;
