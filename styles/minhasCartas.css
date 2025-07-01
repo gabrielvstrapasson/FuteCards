@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #383838;
     margin: 0;
 }
 
@@ -26,6 +26,7 @@ main {
     font-size: 1.5rem;
     color: white;
 }
+
 
 .navbar{
     background-color: black;
@@ -115,11 +116,19 @@ nav a {
     color: #333;
 }
 
+.catalog-title {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+
 .catalog {
     max-width: 1500px;
     margin: 0.5rem auto;
     padding: 0 1rem;
+    
 }
+
 
 
 .card-container {

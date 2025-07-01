@@ -16,8 +16,12 @@
 
         <div class="right-login">
             <div class="card-login">
-                <h1>Faça login</h1>
-                <form method="POST" class="validate-form" id="login-form">
+                <h1>Crie uma conta</h1>
+                <form method="POST" class="validate-form" id="register-form">
+                <div class="textfield">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="name" name="name" placeholder="Nome Completo" required>
+                </div>
 
                 <div class="textfield">
                     <i class="fa-solid fa-envelope"></i>
@@ -27,14 +31,19 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="password" placeholder="Senha" required>
                 </div>
+                <div class="textfield">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="confirm_password" name="confirm_password" placeholder="Senha" required>
+                </div>
                 <div class="btn-container">
-                    <button type="submit" class="btn-entrar">Entrar</button>
+                    <button class="btn-register">Cadastre-se</button>
                 </div>
                 </form>
 
                 <div class="login-link">
-                    <p>Não tem uma conta? <a href="register.html"> Clique aqui!</a></p>
+                    <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
                 </div>
+
             </div>
         </div>
         <script src="script.js"></script>

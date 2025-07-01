@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #383838;
     margin: 0;
 }
 
@@ -109,29 +109,33 @@ nav a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: white;
+    background-color: #383838;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    color: white;
 }
 
 .add-product-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+
 }
 
 .form-title {
     margin-bottom: 1rem;
     font-size: 1rem;
+    color: white;
 }
 
 .form-field label {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: #555;
+    color: white;
     font-weight: bold;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
 }
+
 
 .form-field input[type="text"] {
     width: 100%;
@@ -139,32 +143,43 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    background-color: #D9D9D9;
+    color:black
+}
+
+.upload-text {
+    color: rgb(34, 33, 33);
+    font-size: 0.9rem;
 }
 
 .upload-label {
-    background-color: #f0f0f0;
+    background-color: #D9D9D9;
     border: 1px solid #ccc;
     padding: 0.8rem;
     border-radius: 4px;
     cursor: pointer;
     text-align: right;
-    color: #888;
+    color: black;
+    display: flex;
     font-size: 0.9rem;
 }
 
 .form-buttons {
     display: flex; 
     justify-content: flex-end; 
-    gap: 2rem; ;
+    gap: 1rem; ;
 }
 
 .btn {
     padding: 0.8rem 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
+    width: 150px;
+    height: 50px;
+    
 }
 
 .btn-primary {
@@ -191,27 +206,30 @@ nav a {
     max-width: 1200px;
     margin: 4px auto;
     padding: 2rem;
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(1, 0, 1, 0.1);
+    background-color: #383838;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    
 }
 
 .list-title{
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    color: white;
 }
 
 .items-table {
     width: 100%;
     border-collapse: collapse;
+    
 }
 
 .items-table thead th{
-    background-color: #e9ecef; 
+    background-color: #8E8E8E; 
     padding: 0.8rem 1rem;
     text-align: left; 
     font-size: 0.9rem;
-    color: #333;
+        color: white;
     border-bottom: 2px solid #dee2e6;
 }
 

@@ -73,9 +73,11 @@ body {
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 10px -6px #00000056;
 }
 
 .textfield i {
@@ -95,6 +97,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .btn-container button {
