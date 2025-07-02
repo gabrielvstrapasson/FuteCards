@@ -29,4 +29,4 @@
 
 Desenvolvido por **[Gabriel Vinicius Strapasson]**.
 
-[<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">]([https://www.linkedin.com/in/gabrielvstrapasson/])
+[<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">]([https://www.linkedin.com/in/gabrielvstrapasson/)
