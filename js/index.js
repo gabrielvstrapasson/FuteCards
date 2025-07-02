@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCards(filteredCards);
     });
 
+    const cardGrid = document.querySelector('.card-grid');
 
     const initialCards = [
         { id: 1, name: 'ALISSON', level: '95', rarity: 'Ultra Raro', value: '49,99', image: 'cardAlisson.png' },
@@ -40,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardContainer = document.createElement('div');
             cardContainer.className = 'card-container';
 
+            cardContainer.dataset.id = card.id;
+
             cardContainer.innerHTML = `
                 <img class="card-image" src="${card.image.startsWith('data:image') ? card.image : 'images/cards/' + card.image}" alt="${card.name}">
                 <div class="card-info">
@@ -53,6 +56,45 @@ document.addEventListener('DOMContentLoaded', () => {
             cardGrid.appendChild(cardContainer);
         });
     }
+
+        function addToCart(productId) {
+        const allProducts = JSON.parse(localStorage.getItem('futeCards')) || [];
+        let cart = JSON.parse(localStorage.getItem('futeCart')) || [];
+    
+        const productToAdd = allProducts.find(product => product.id === productId);
+        if (!productToAdd) return;
+    
+        const existingItem = cart.find(item => item.id === productId);
+    
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ ...productToAdd, quantity: 1 });
+        }
+    
+        localStorage.setItem('futeCart', JSON.stringify(cart));
+        alert(`'${productToAdd.name}' foi adicionado ao carrinho!`);
+    }
+
+    cardGrid.addEventListener('click', (event) => {
+        if (event.target.classList.contains('buy-button')) {
+            const cardContainer = event.target.closest('.card-container');
+            const cardId = Number(cardContainer.dataset.id);
+            addToCart(cardId);
+        }
+    });
+    
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const allCards = JSON.parse(localStorage.getItem('futeCards')) || [];
+        
+        const filteredCards = allCards.filter(card => 
+            card.name.toLowerCase().includes(searchTerm) ||
+            card.rarity.toLowerCase().includes(searchTerm)
+        );
+        
+        renderCards(filteredCards);
+    });
 
     let cards = JSON.parse(localStorage.getItem('futeCards'));
 

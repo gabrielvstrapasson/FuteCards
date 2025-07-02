@@ -1,120 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/meuCarrinho.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Meu Carrinho</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/meuCarrinho.css"> 
+    <title>Meu Carrinho - FuteCards</title>
 </head>
 <body>
     <header>
-    <div class="navbar">
-        <div class="header-inner-content">
-            <a href="index.html"><img src="images/design/logoPretoBrancoSemFundo.png" width="120" height="60" alt="Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="minhasCartas.html">Minhas Cards</a></li>
-                    <li><a href="adicionarProduto.html">Adicionar Cards</a></li>
-                </ul>
-            </nav>
-            <div class="nav-icon-container">
-                <div class="search-box">
-                    <input type="text" class="search-text" placeholder="Encontre sua carta...">
-                    <button class="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+        <div class="navbar">
+            <div class="header-inner-content">
+                <a href="index.html"><img src="images/design/logoPretoBrancoSemFundo.png" width="120" height="60" alt="Logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="minhasCartas.html">Minhas Cards</a></li>
+                        <li><a href="adicionarProduto.html">Adicionar Cards</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icon-container">
+                    <a href="meuCarrinho.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="login.html"> <i class="fa-regular fa-circle-user"></i></a>
                 </div>
-                <a href="meuCarrinho.html"> <i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="login.html"> <i class="fa-regular fa-circle-user"></i></a>
             </div>
         </div>
-    </div>
-</header>
-      <main>
-        <div class="add-product-container">
-          <h1>Meu Carrinho</h1>
-  <div class="items-list-container">
-      <h2 class="list-title">Itens Adicionados</h2>
-      <table class="items-table">
-          <thead>
-              <tr>
-                  <th>Produto</th>
-                  <th>Quantidade</th>
-                  <th>Preço</th>
-                  <th>Excluir</th>
-              </tr>
-          </thead>
-          <tbody>
-            <tr class="card-item">
-              <td class="product-sell">
-              <img src="images/cards/cardAlisson.png" alt="Card Alisson">
-              <div class="product-info">
-                <p><strong>JOGADOR:</strong> Alisson</p>
-                <p><strong>NÍVEL:</strong> 95</p>
-                <p><strong>RARIDADE:</strong> Ultra Raro</p>
-              </div>
-              </td>
-              <td>
-                <div class="quantitty-items">
-                  <button class="quantity-btn">-</button>
-                  <span>1</span>
-                  <button class="quantity-btn">+</button>
-                </div>
-              </td>
-              <td class="price-sell">R$ 49,99</td>
-              <td>
-                <i class="fa-solid fa-trash-can delete-icon"></i>
-              </td>
-            </tr>
+    </header>
 
-                        <tr class="card-item">
-              <td class="product-sell">
-              <img src="images/cards/cardCR7.png" alt="Card Alisson">
-              <div class="product-info">
-                <p><strong>JOGADOR:</strong> Cristiano Ronaldo</p>
-                <p><strong>NÍVEL:</strong> 92</p>
-                <p><strong>RARIDADE:</strong> Ultra Raro</p>
-              </div>
-              </td>
-              <td>
-                <div class="quantitty-items">
-                  <button class="quantity-btn">-</button>
-                  <span>1</span>
-                  <button class="quantity-btn">+</button>
-                </div>
-              </td>
-              <td class="price-sell">R$ 79,99</td>
-              <td>
-                <i class="fa-solid fa-trash-can delete-icon"></i>
-              </td>
-            </tr>
-          </tbody>
-      </table>
-  </div>
-  </div>
-  
-  </main>
+    <main>
+        <div class="cart-container">
+            <h2>Meu Carrinho de Compras 🛒</h2>
+            
+            <div class="cart-header">
+                <span>Produto</span>
+                <span>Preço</span>
+                <span>Quantidade</span>
+                <span>Subtotal</span>
+                <span>Ação</span>
+            </div>
 
-      <footer>
-        <div class="footer-inner-content">
-          <span>Todos os direitos reservados a FuteCards</span>
-          <div class="social-links">
+            <div id="cart-items-container"></div>
+
+            <div class="cart-summary">
+                <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
+                <button class="checkout-button">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+
+<footer>
+    <div class="footer-inner-content">
+        <span>Todos os direitos reservados a FuteCards</span>
+        <div class="social-links">
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-x-twitter"></i>
-          </div>
         </div>
-      </footer>
+    </div>
+</footer>
 
-
-
+    <script src="js/carrinho.js"></script>
 </body>
 </html>
